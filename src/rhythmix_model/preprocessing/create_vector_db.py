@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import List, Literal
 from qdrant_client import QdrantClient
 from qdrant_client.http import models
-from rhythmix_model.configs import settings
+from conf import settings
 
 
 def set_up_vectors(data_path: Path) -> pd.DataFrame:
