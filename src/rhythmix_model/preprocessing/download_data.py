@@ -2,7 +2,7 @@ import pandas as pd
 import kagglehub
 import os
 import shutil
-from rhythmix_model.configs import settings
+from conf import settings
 from pathlib import Path
 
 
@@ -15,7 +15,7 @@ def download_data(data_dir: Path, kaggle_data: str, kaggle_file: str) -> None:
         kaggle_data (str): The Kaggle dataset identifier.
         kaggle_file (str): The name of the file to be saved.
     """
-    
+
     # Create new directory if it doesn't exist
     os.makedirs(data_dir, exist_ok=True)
 
