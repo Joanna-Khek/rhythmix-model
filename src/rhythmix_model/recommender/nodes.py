@@ -12,7 +12,7 @@ from langchain_core.output_parsers.string import StrOutputParser
 from langchain.output_parsers import PydanticOutputParser
 from rhythmix_model.recommender.validators import SongAttributes
 from rhythmix_model.recommender import prompts
-from rhythmix_model.configs import settings
+from conf import settings
 from dotenv import load_dotenv
 
 load_dotenv()
