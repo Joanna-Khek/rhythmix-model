@@ -39,19 +39,28 @@ The user will provide you with a JSON array of songs. Each song contains:
 - `track_link`
 - `score`
 
-Your task is to format the songs into a **Markdown list**, and for each song, include a small table showing the details, like this:
-No bullet points please.
+Your task is to format the songs into a dictionary with the following format:
 
-**Song Title: track_name**
+```json
+[
+    {{
+        "track_name": "song_name",
+        "track_artist": "artist_name",
+        "track_genre": "genre_name",
+        "track_link": "spotify_link",
+        "score": score_value
+    }},
+    {{
+        "track_name": "song_name",
+        "track_artist": "artist_name",
+        "track_genre": "genre_name",
+        "track_link": "spotify_link",
+        "score": score_value
+    }}
+]
+```
 
-   | Attribute | Value |
-   |---|---|
-   | **Artist** | track_artist |
-   | **Genre** | track_genre |
-   | **Search Score** | score |
-   | **Spotify Link** | track_link |
-
-Please format the following JSON into this Markdown style:
+Please format the following JSON into this dictionary format:
 {model_prediction}
 
 If the JSON is empty, return exactly this string: `No songs found. Please try again.`
